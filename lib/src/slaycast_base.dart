@@ -22,7 +22,7 @@ class Slaycast {
     request.headers
       ..contentType = ContentType.json
       ..add('user-agent', 'Raycast/1.65.0 (macOS Version 14.1.2 (Build 23B92))')
-      ..add('authorization', auth.apiKey)
+      ..add('authorization', 'Bearer ${auth.apiKey}')
       ..add('x-raycast-signature', auth.signature);
 
     request.write(
